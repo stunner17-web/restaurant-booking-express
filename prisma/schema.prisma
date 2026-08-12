@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model RestaurantTable {
+  id           Int           @id @default(autoincrement())
+  label        String
+  capacity     Int
+  reservations Reservation[]
+}
+
+model Reservation {
+  id        Int             @id @default(autoincrement())
+  name      String
+  partySize Int
+  date      String
+  time      String
+  status    String          @default("confirmed")
+  tableId   Int
+  table     RestaurantTable @relation(fields: [tableId], references: [id])
+  createdAt DateTime        @default(now())
+}

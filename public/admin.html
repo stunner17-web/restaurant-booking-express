@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ember & Oak — Admin</title>
+  <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <h1>Reservations — Admin</h1>
+
+  <div class="filters">
+    <label>From: <input type="date" id="startDateFilter" /></label>
+    <label>To: <input type="date" id="endDateFilter" /></label>
+    <label>Status:
+      <select id="statusFilter">
+        <option value="">All</option>
+        <option value="confirmed">Confirmed</option>
+        <option value="seated">Seated</option>
+        <option value="completed">Completed</option>
+        <option value="no-show">No-show</option>
+        <option value="cancelled">Cancelled</option>
+      </select>
+    </label>
+    <button id="refreshBtn">Refresh</button>
+    <button id="todayBtn">Today</button>
+  </div>
+
+  <table id="reservationsTable">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Name</th>
+        <th>Party</th>
+        <th>Table</th>
+        <th>Status</th>
+        <th>Actions</th>
+       
+      </tr>
+    </thead>
+    <tbody id="reservationsBody"></tbody>
+  </table>
+
+  <script src="admin.js"></script>
+</body>
+</html>

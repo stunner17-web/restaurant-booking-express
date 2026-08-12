@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ember & Oak — Reserve a Table</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="vignette"></div>
+
+  <div class="wrap">
+    <div class="card" id="bookingCard">
+      <div class="eyebrow">Ember &amp; Oak — Austin</div>
+      <h1>Reserve a table</h1>
+      <div class="accent-line"></div>
+      <p class="sub">Wood-fired plates, small pours, no rush. Tell us when you're coming.</p>
+
+      <form id="bookingForm">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Full name" required>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="party">Party size</label>
+            <select id="party">
+              <option value="1">1 guest</option>
+              <option value="2" selected>2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5">5+ guests</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="time">Time</label>
+            <select id="time">
+              <option value="18:00">6:00 PM</option>
+              <option value="19:00" selected>7:00 PM</option>
+              <option value="19:30">7:30 PM</option>
+              <option value="20:00">8:00 PM</option>
+              <option value="20:30">8:30 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="date">Date</label>
+          <input id="date" type="date" required>
+        </div>
+
+        <p id="errorMsg" class="error"></p>
+
+        <button type="submit" id="submitBtn">Confirm reservation</button>
+      </form>
+
+      <div class="divider"></div>
+      <div class="meta">
+        <span>Ember &amp; Oak</span>
+        <span>5–9pm · Mon–Sun</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
